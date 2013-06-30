@@ -45,11 +45,11 @@ CreateYandexMap.prototype.setSpan = function (longitudeSpanDegrees, latitudeSpan
 }
 
 CreateYandexMap.prototype.setSize = function (width, height) {
-    if(!(width>0 && width<=650)){
+    if (!(width > 0 && width <= 650)) {
         throw new Error('Static-Yandex-Map: Map width can be from 1 to 650 pixels!')
     }
 
-    if(!(height>0 && height<=450)){
+    if (!(height > 0 && height <= 450)) {
         throw new Error('Static-Yandex-Map: Map height can be from 1 to 450 pixels!')
     }
 
@@ -64,7 +64,7 @@ CreateYandexMap.prototype.setZ = function (z) {
     } else {
         throw new Error('Static-Yandex-Map: Scale(z) is from 0 to 17!');
     }
-    
+
 }
 
 CreateYandexMap.prototype.setKey = function (key) {
@@ -107,7 +107,7 @@ CreateYandexMap.prototype.getUrl = function () {
     return ('' + this.url + '?' + params.join('&') + ((this.points.length > 0) ? ('&pt=' + this.points.join('~')) : ''));
 }
 
-CreateYandexMap.prototype.toString=function(){
+CreateYandexMap.prototype.toString = function () {
     return this.getUrl();
 }
 exports = module.exports = CreateYandexMap;
