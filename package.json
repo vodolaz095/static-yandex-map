@@ -23,7 +23,7 @@
   "author": "Anatolij Ostroumov",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "devDependancies":{
+  "devDependencies":{
       "vows":"*"
   },
   "bugs": {
