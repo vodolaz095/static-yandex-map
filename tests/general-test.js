@@ -19,7 +19,6 @@ vows.describe('General map test').addBatch(
                 assert.equal(urlParams.protocol, 'http:');
                 assert.ok(urlParams.slashes);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
-                assert.isNull(urlParams.hash);
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450');
                 assert.equal(urlParams.query, 'll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450');
                 assert.equal(urlParams.pathname, '/1.x/');
@@ -33,7 +32,6 @@ vows.describe('General map test').addBatch(
                 assert.equal(urlParams.protocol, 'http:');
                 assert.ok(urlParams.slashes);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
-                assert.isNull(urlParams.hash);
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ya_lubly_myaso');
                 assert.equal(urlParams.query, 'll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ya_lubly_myaso');
                 assert.equal(urlParams.pathname, '/1.x/');
@@ -54,7 +52,6 @@ vows.describe('General map test').addBatch(
                 assert.equal(urlParams.protocol, 'http:');
                 assert.ok(urlParams.slashes);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
-                assert.isNull(urlParams.hash);
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=sat&lang=en-US&size=650,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.query, 'll=37.62007,55.75363&l=sat&lang=en-US&size=650,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.pathname, '/1.x/');
@@ -75,7 +72,6 @@ vows.describe('General map test').addBatch(
                 assert.equal(urlParams.protocol, 'http:');
                 assert.ok(urlParams.slashes);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
-                assert.isNull(urlParams.hash);
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.query, 'll=37.62007,55.75363&l=map&lang=en-US&size=650,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.pathname, '/1.x/');
@@ -96,7 +92,6 @@ vows.describe('General map test').addBatch(
                 assert.equal(urlParams.protocol, 'http:');
                 assert.ok(urlParams.slashes);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
-                assert.isNull(urlParams.hash);
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.query, 'll=37.62007,55.75363&l=map&lang=en-US&size=650,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.pathname, '/1.x/');
