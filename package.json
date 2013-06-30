@@ -1,0 +1,32 @@
+{
+  "name": "static-yandex-map",
+  "version": "0.0.1",
+  "description": "Generate URLs to show Yandex maps as jpeg images",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/vows -v --spec tests/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vodolaz095/static-yandex-map.git"
+  },
+  "keywords": [
+    "static",
+    "yandex",
+    "maps",
+    "jpg",
+    "jpeg",
+    "png",
+    "pictures",
+    "map"
+  ],
+  "author": "Anatolij Ostroumov",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependancies":{
+      "vows":"*"
+  },
+  "bugs": {
+    "url": "https://github.com/vodolaz095/static-yandex-map/issues"
+  }
+}
