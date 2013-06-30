@@ -18,7 +18,6 @@ vows.describe('General map test').addBatch(
                 var urlParams = url.parse(mapUrl);
                 assert.equal(urlParams.protocol, 'http:');
                 assert.ok(urlParams.slashes);
-                if (typeof urlParams.auth != 'undefined') assert.isNull(urlParams.auth);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
                 assert.isNull(urlParams.hash);
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450');
@@ -33,7 +32,6 @@ vows.describe('General map test').addBatch(
                 var urlParams = url.parse(mapUrl);
                 assert.equal(urlParams.protocol, 'http:');
                 assert.ok(urlParams.slashes);
-                if (typeof urlParams.auth != 'undefined') assert.isNull(urlParams.auth);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
                 assert.isNull(urlParams.hash);
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ya_lubly_myaso');
@@ -55,7 +53,6 @@ vows.describe('General map test').addBatch(
                 var urlParams = url.parse(mapUrl);
                 assert.equal(urlParams.protocol, 'http:');
                 assert.ok(urlParams.slashes);
-                if (typeof urlParams.auth != 'undefined') assert.isNull(urlParams.auth);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
                 assert.isNull(urlParams.hash);
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=sat&lang=en-US&size=650,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
@@ -77,7 +74,6 @@ vows.describe('General map test').addBatch(
                 var urlParams = url.parse(mapUrl);
                 assert.equal(urlParams.protocol, 'http:');
                 assert.ok(urlParams.slashes);
-                if (typeof urlParams.auth != 'undefined') assert.isNull(urlParams.auth);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
                 assert.isNull(urlParams.hash);
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
@@ -99,7 +95,6 @@ vows.describe('General map test').addBatch(
                 var urlParams = url.parse(mapUrl);
                 assert.equal(urlParams.protocol, 'http:');
                 assert.ok(urlParams.slashes);
-                if (typeof urlParams.auth != 'undefined') assert.isNull(urlParams.auth);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
                 assert.isNull(urlParams.hash);
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
