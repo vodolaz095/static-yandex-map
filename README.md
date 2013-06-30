@@ -4,7 +4,6 @@ static-yandex-map
 Generate URLs to show Yandex maps as jpeg/png images.
 
 
-
 Example
 ==================
 
@@ -20,7 +19,7 @@ Example
     //   .setKey('key') //You can get it here - http://api.yandex.ru/maps/form.xml
     //but you will have some limitations without it
 
-         .setType('map')//one of 'map','satellite','hybrid','traffic'
+         .setType('satellite')//one of 'map','satellite','hybrid','traffic'
 
          .setSize(650,450)
          //image size in pixels - max size is 650x450 -
