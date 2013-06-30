@@ -11,25 +11,28 @@ Example
 
 ```javascript
 
-    var stym=require('static-yandex.map');
-    var s=new stym(37.620070,55.753630) //setting coordinates of map center - http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_center.xml
+    var stym=require('static-yandex-map');
+    var s=new stym(37.620070,55.753630)
+    //Creating map object - setting coordinates of map center -
+    //http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_center.xml
 
     //getting API key is not mandatory
     //   .setKey('key') //You can get it here - http://api.yandex.ru/maps/form.xml
     //but you will have some limitations without it
 
-         .setType('sat')//one of 'map','sat','hybrid','traffic'
+         .setType('map')//one of 'map','satellite','hybrid','traffic'
 
          .setSize(650,450)
-                //image size in pixels - max size is 650x450 -
-                //http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_size.xml
+         //image size in pixels - max size is 650x450 -
+         //http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_size.xml
 
          .setZ(13)
-                //0-17(highest) - scale -
-                //http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_scale.xml
+         //Setting map scale 0-17(highest)
+         //http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_scale.xml
+
          //.setSpan(0.02,0.02)
-                //set viewport span in degrees
-                //http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_viewport.xml
+         //Set viewport span in degrees - analogous to setZ
+         //http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_viewport.xml
 
          .setLang('en-US')
                 //select one of 'ru-RU','tr-TR', 'en-US', 'uk-UA'
@@ -43,6 +46,7 @@ Example
     // -> http://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=sat&lang=en-US&size=450,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99
 ```
 
+This is example of map:
 ![Example of map](http://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=sat&lang=en-US&size=450,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99)
 
 Links
