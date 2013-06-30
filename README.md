@@ -19,18 +19,29 @@ Example
     //but you will have some limitations without it
 
          .setType('sat')//one of 'map','sat','hybrid','traffic'
-         .setSize(650,450)//image size in pixels - max size is 650x450 - http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_size.xml
-         .setZ(13)//0-17(highest) - scale -  http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_scale.xml
-         //.setSpan(0.02,0.02) //set viewport span in degrees - http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_viewport.xml
-         .setLang('en-US') //select one of 'ru-RU','tr-TR', 'en-US', 'uk-UA'
 
-    //Placing points on map - details here : http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/markers.xml
+         .setSize(650,450)
+                //image size in pixels - max size is 650x450 -
+                //http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_size.xml
+
+         .setZ(13)
+                //0-17(highest) - scale -
+                //http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_scale.xml
+         //.setSpan(0.02,0.02)
+                //set viewport span in degrees
+                //http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/map_viewport.xml
+
+         .setLang('en-US')
+                //select one of 'ru-RU','tr-TR', 'en-US', 'uk-UA'
+
+    //Placing points on map
+    //details here : http://api.yandex.com/maps/doc/staticapi/1.x/dg/concepts/markers.xml
          .addPoint(37.620070,55.753630,'pm','wt','m',1)
          .addPoint(37.64,55.76363,'pm','wt','m',99);
 
     console.log(s.getUrl());
     // -> http://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=sat&lang=en-US&size=450,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99
-
+```
 
 ![Example of map](http://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=sat&lang=en-US&size=450,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99)
 
