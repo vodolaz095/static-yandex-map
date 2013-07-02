@@ -49,6 +49,14 @@ This is example of map:
 
 ![Example of map](http://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=sat&lang=en-US&size=450,450&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99)
 
+Options
+==================
+On *nix machines Yandex Map api key can be set as enviroment variable:
+
+    $ export yandexMapApiKey='ALTJHk8BAAAAREWTEg=='; node app.js
+
+You can get this key from this page: [http://api.yandex.ru/maps/getkey.xml](http://api.yandex.ru/maps/getkey.xml)
+
 Links
 ==================
 

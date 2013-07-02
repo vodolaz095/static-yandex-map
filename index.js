@@ -14,6 +14,9 @@ function CreateYandexMap(longitude, latitude) {
         'lang': 'ru-RU',
         'size': '650,450'
     };
+    if(process.env.yandexMapApiKey){
+        this.parameters.key=process.env.yandexMapApiKey;
+    }
     this.points = [];
     return this;
 }

@@ -1,10 +1,10 @@
 {
   "name": "static-yandex-map",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generate URLs to show Yandex maps as jpeg images",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/vows -v --spec tests/*"
+    "test": "export yandexMapApiKey='ALTJHk8BAAAAREWTEg=='; ./node_modules/.bin/vows --spec tests/*"
   },
   "repository": {
     "type": "git",
