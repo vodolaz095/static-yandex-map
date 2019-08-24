@@ -1,3 +1,5 @@
+'use strict';
+
 function CreateYandexMap(longitude, latitude) {
     if (Math.abs(longitude) > 180) {
         throw new Error('Static-Yandex-Map: Longitude can be from -180 to +180 degrees!');
@@ -7,7 +9,7 @@ function CreateYandexMap(longitude, latitude) {
         throw new Error('Static-Yandex-Map: Latitude can be from -90 to +90 degrees!');
     }
 
-    this.url = 'http://static-maps.yandex.ru/1.x/';
+    this.url = 'https://static-maps.yandex.ru/1.x/';
     this.parameters = {
         'll': longitude + ',' + latitude,
         'l': 'map',

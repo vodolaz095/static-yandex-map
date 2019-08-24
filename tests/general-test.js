@@ -16,27 +16,27 @@ vows.describe('URL generator for Yandex Maps').addBatch(
                 var mapObj = new topic.StaticYandexMaps(37.620070, 55.753630);
                 var mapUrl = mapObj.getUrl();
                 var urlParams = url.parse(mapUrl);
-                assert.equal(urlParams.protocol, 'http:');
+                assert.equal(urlParams.protocol, 'https:');
                 assert.ok(urlParams.slashes);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ALTJHk8BAAAAREWTEg==');
                 assert.equal(urlParams.query, 'll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ALTJHk8BAAAAREWTEg==');
                 assert.equal(urlParams.pathname, '/1.x/');
                 assert.equal(urlParams.path, '/1.x/?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ALTJHk8BAAAAREWTEg==');
-                assert.equal(urlParams.href, 'http://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ALTJHk8BAAAAREWTEg==');
+                assert.equal(urlParams.href, 'https://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ALTJHk8BAAAAREWTEg==');
             },
             'it accepts coordinates and API key and creates an URL': function (topic) {
                 var mapObj = new topic.StaticYandexMaps(37.620070, 55.753630).setKey('ya_lubly_myaso');
                 var mapUrl = mapObj.getUrl();
                 var urlParams = url.parse(mapUrl);
-                assert.equal(urlParams.protocol, 'http:');
+                assert.equal(urlParams.protocol, 'https:');
                 assert.ok(urlParams.slashes);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ya_lubly_myaso');
                 assert.equal(urlParams.query, 'll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ya_lubly_myaso');
                 assert.equal(urlParams.pathname, '/1.x/');
                 assert.equal(urlParams.path, '/1.x/?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ya_lubly_myaso');
-                assert.equal(urlParams.href, 'http://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ya_lubly_myaso');
+                assert.equal(urlParams.href, 'https://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=map&lang=ru-RU&size=650,450&key=ya_lubly_myaso');
             },
             'it accepts coordinates and chainable methods, and it creates the url to!': function (topic) {
                 var mapObj = new topic.StaticYandexMaps(37.620070, 55.753630)
@@ -49,14 +49,14 @@ vows.describe('URL generator for Yandex Maps').addBatch(
                     .addPoint(37.64, 55.76363, 'pm', 'wt', 'm', 99);
                 var mapUrl = mapObj.getUrl();
                 var urlParams = url.parse(mapUrl);
-                assert.equal(urlParams.protocol, 'http:');
+                assert.equal(urlParams.protocol, 'https:');
                 assert.ok(urlParams.slashes);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=sat&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.query, 'll=37.62007,55.75363&l=sat&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.pathname, '/1.x/');
                 assert.equal(urlParams.path, '/1.x/?ll=37.62007,55.75363&l=sat&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
-                assert.equal(urlParams.href, 'http://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=sat&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
+                assert.equal(urlParams.href, 'https://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=sat&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
             },
             'it is convertable to string via typecast': function (topic) {
                 var mapObj = new topic.StaticYandexMaps(37.620070, 55.753630)
@@ -69,14 +69,14 @@ vows.describe('URL generator for Yandex Maps').addBatch(
                     .addPoint(37.64, 55.76363, 'pm', 'wt', 'm', 99);
                 var mapUrl = '' + mapObj;
                 var urlParams = url.parse(mapUrl);
-                assert.equal(urlParams.protocol, 'http:');
+                assert.equal(urlParams.protocol, 'https:');
                 assert.ok(urlParams.slashes);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.query, 'll=37.62007,55.75363&l=map&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.pathname, '/1.x/');
                 assert.equal(urlParams.path, '/1.x/?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
-                assert.equal(urlParams.href, 'http://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
+                assert.equal(urlParams.href, 'https://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
             },
             'it is convertable to string via toString': function (topic) {
                 var mapObj = new topic.StaticYandexMaps(37.620070, 55.753630)
@@ -89,14 +89,14 @@ vows.describe('URL generator for Yandex Maps').addBatch(
                     .addPoint(37.64, 55.76363, 'pm', 'wt', 'm', 99);
                 var mapUrl = mapObj.toString();
                 var urlParams = url.parse(mapUrl);
-                assert.equal(urlParams.protocol, 'http:');
+                assert.equal(urlParams.protocol, 'https:');
                 assert.ok(urlParams.slashes);
                 assert.equal(urlParams.host, 'static-maps.yandex.ru');
                 assert.equal(urlParams.search, '?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.query, 'll=37.62007,55.75363&l=map&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
                 assert.equal(urlParams.pathname, '/1.x/');
                 assert.equal(urlParams.path, '/1.x/?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
-                assert.equal(urlParams.href, 'http://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
+                assert.equal(urlParams.href, 'https://static-maps.yandex.ru/1.x/?ll=37.62007,55.75363&l=map&lang=en-US&size=650,450&key=ALTJHk8BAAAAREWTEg==&z=13&pt=37.62007,55.75363,pmwtm1~37.64,55.76363,pmwtm99');
             },
             'it throws errors for coordinates from perpendicular world': function (topic) {
                 try {
